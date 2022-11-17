@@ -29,6 +29,7 @@ function clickOpt1() {
     setTimeout(changeColorWhenClickingOpt1, 300)
 }
 //sayhello
+//sayhello
 const option2 = document.querySelector('#option2')
 option2.style.cursor = 'pointer'
 option2.addEventListener('click',clickOpt2)
