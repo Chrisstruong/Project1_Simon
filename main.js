@@ -213,4 +213,3 @@ function runColorForOptions () {//function to delay the for loop
 // console.log(array)
 // console.log(typeof array)
 // }
-// triet
