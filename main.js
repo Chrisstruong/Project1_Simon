@@ -28,7 +28,7 @@ function clickOpt1() {
     option1.removeEventListener('click', clickOpt1)
     setTimeout(changeColorWhenClickingOpt1, 300)
 }
-
+//sayhello
 const option2 = document.querySelector('#option2')
 option2.style.cursor = 'pointer'
 option2.addEventListener('click',clickOpt2)
