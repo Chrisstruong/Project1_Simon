@@ -1,0 +1,9 @@
+.option {
+    background-color: aquamarine;
+    color: white;
+    border-radius: 30px;
+    padding: 20px;
+    text-align:left;
+    margin: 30px 30px 30px 30px;
+    width: 70px;
+}
