@@ -22,7 +22,7 @@ function clickOpt1() {
         clearTimeout(timeOut)
         checkGame()
     }
-    this.style.backgroundColor = 'red'
+    this.style.backgroundColor = 'rgb(172, 255, 47)'//xanh sang
     option1.style.cursor = 'wait'
     //make the program untouchable when changing color when clicking
     option1.removeEventListener('click', clickOpt1)
@@ -57,7 +57,7 @@ function clickOpt3() {
         clearTimeout(timeOut)
         checkGame()
     }
-    this.style.backgroundColor = 'red'
+    this.style.backgroundColor = 'yellow'
     option3.style.cursor = 'wait'
     //make the program untouchable when changing color when clicking
     option3.removeEventListener('click', clickOpt3)
@@ -74,7 +74,7 @@ function clickOpt4() {
         clearTimeout(timeOut)
         checkGame()
     }
-    this.style.backgroundColor = 'red'
+    this.style.backgroundColor = 'aqua'
     option4.style.cursor = 'wait'
     //make the program untouchable when changing color when clicking
     option4.removeEventListener('click', clickOpt4)
@@ -103,7 +103,7 @@ function checkGame () {
         }
     } 
 function changeColorWhenClickingOpt1 () {
-    option1.style.backgroundColor = 'aquamarine'
+    option1.style.backgroundColor = 'rgba(172, 255, 47, 0.594)'//xanh toi
     if (answer[answer.length-1] === array[answer.length-1]) {
         option1.addEventListener('click', clickOpt1)
     }
@@ -111,7 +111,7 @@ function changeColorWhenClickingOpt1 () {
 }
 
 function changeColorWhenClickingOpt2 () {
-    option2.style.backgroundColor = 'aquamarine'
+    option2.style.backgroundColor = 'rgba(245, 14, 14, 0.682)'
     if (answer[answer.length-1] === array[answer.length-1]) {
         option2.addEventListener('click', clickOpt2)
     }
@@ -119,7 +119,7 @@ function changeColorWhenClickingOpt2 () {
 }
 
 function changeColorWhenClickingOpt3 () {
-    option3.style.backgroundColor = 'aquamarine'
+    option3.style.backgroundColor = 'rgba(255, 255, 0, 0.652)'
     if (answer[answer.length-1] === array[answer.length-1]) {
         option3.addEventListener('click', clickOpt3)
     }
@@ -127,7 +127,7 @@ function changeColorWhenClickingOpt3 () {
 }
 
 function changeColorWhenClickingOpt4 () {
-    option4.style.backgroundColor = 'aquamarine'
+    option4.style.backgroundColor = 'rgba(0, 255, 255, 0.704)'
     if (answer[answer.length-1] === array[answer.length-1]) {
         option4.addEventListener('click', clickOpt4)
     }
@@ -143,30 +143,30 @@ function delayForLoop (i){//This function is the most interesting
     setTimeout(function (){
         if (array[i]=== '1') {
             option1.removeEventListener('click', clickOpt1)
-            option1.style.backgroundColor = 'pink'
+            option1.style.backgroundColor = 'rgb(172, 255, 47)'//xanh sang
             setTimeout(function(){
-                option1.style.backgroundColor = 'aquamarine'   
+                option1.style.backgroundColor = 'rgba(172, 255, 47, 0.594)'   //xanh toi
             },1000)
 
         } else if (array[i] === '2') {
             option2.removeEventListener('click', clickOpt2)
-            option2.style.backgroundColor = 'pink'
+            option2.style.backgroundColor = 'red'//do sang
             setTimeout(function(){
-                option2.style.backgroundColor = 'aquamarine'
+                option2.style.backgroundColor = 'rgba(245, 14, 14, 0.682)'// do toi
             },1000)
 
         } else if (array[i] === '3') {
             option3.removeEventListener('click', clickOpt3)
-            option3.style.backgroundColor = 'pink'
+            option3.style.backgroundColor = 'yellow'
             setTimeout(function(){
-                option3.style.backgroundColor = 'aquamarine'   
+                option3.style.backgroundColor = 'rgba(255, 255, 0, 0.652)'   
             },1000)
 
         } else  {
             option4.removeEventListener('click', clickOpt4)
-            option4.style.backgroundColor = 'pink'
+            option4.style.backgroundColor = 'aqua'
             setTimeout(function(){
-                option4.style.backgroundColor = 'aquamarine'            
+                option4.style.backgroundColor = 'rgba(0, 255, 255, 0.704)'            
             },1000)
         }
     }, 2000*i)

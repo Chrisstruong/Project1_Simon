@@ -8,5 +8,17 @@
     width: 70px;
 }
 body {
-    background-color:rgb(38, 36, 36);
+    background-color:grey;
+}
+#option1 {
+    background-color: rgba(172, 255, 47, 0.594);
+}
+#option2 {
+    background-color: rgba(245, 14, 14, 0.682);
+}
+#option3 {
+    background-color: rgba(255, 255, 0, 0.652);
+}
+#option4 {
+    background-color: rgba(0, 255, 255, 0.704);
 }
