@@ -1,8 +1,12 @@
 let array = ""
 let answer = ""
 var timeOut
+const text = document.createElement('p')
 let setConditionForEventListener = false
 const option = document.querySelectorAll('.option')
+const grabBody = document.querySelector('body')
+text.innerHTML = "You are in round 1"
+grabBody.append(text)
 let winCondition = true;
 let randomNum = Math.floor(Math.random()*4)+1
 let turn = 1
@@ -83,14 +87,17 @@ function clickOpt4() {
 //4:45PM: Need to execute immediately when player the first and second wrong answer
 function checkGame () {
         if (answer!== array ) {
-            console.log("You lost the game!")
-            console.log(`Your current answer is: ${answer}`)
+            // console.log("You lost the game!")
+            // console.log(`Your current answer is: ${answer}`)
+            text.innerText = "You have lost the game"
+            grabBody.append(text)
             option1.removeEventListener('click', clickOpt1)
             option2.removeEventListener('click', clickOpt2)
             option3.removeEventListener('click', clickOpt3)
             option4.removeEventListener('click', clickOpt4)
         } else {
-            console.log('You win the game!!')
+            text.innerText = `You are in round ${i+1}`
+            grabBody.append(text)
             answer = ""
             randomNum = Math.floor(Math.random()*4)+1
             array+=randomNum
