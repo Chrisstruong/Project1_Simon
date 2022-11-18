@@ -33,3 +33,17 @@ body {
 #score {
     background-color: whitesmoke;
 }
+
+#lost-message {
+    box-sizing:border-box;
+    left: 39%;
+    width: 30%;
+    border-radius: 8px;
+    background-color: azure;
+    font-size: 30px;
+    font-weight: 700;
+    color: pink;
+    position: absolute;
+    text-align: center;
+    border: 2px;
+}

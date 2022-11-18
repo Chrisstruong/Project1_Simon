@@ -2,13 +2,15 @@ let array = ""
 let answer = ""
 let highestLevel = 0
 var timeOut
-const text = document.createElement('p')
+const text1 = document.createElement('span')
 let setConditionForEventListener = false
 const option = document.querySelectorAll('.option')
 const grabScore = document.querySelector('#score')
-text.innerText = "Current level: 1 Highest Level achieved:"
-grabScore.append(text)
-let winCondition = true;
+const levelMessage = document.createElement('p')
+levelMessage.innerText = "Current level: 1 Highest Level achieved:"
+grabScore.append(levelMessage)
+const lostMessage = document.querySelector('#lost-message')
+lostMessage.style.cursor = 'pointer'
 let randomNum = Math.floor(Math.random()*4)+1
 let turn = 1
 array+= randomNum
@@ -91,20 +93,23 @@ function checkGame () {
     if (answer!== array ) {
         console.log("You lost the game!")
         console.log(`Your current answer is: ${answer}`)
-        text.innerText = `You have lost the game!`
-        grabScore.append(text)
+        text1.innerText = `You have lost the game! `
+        lostMessage.append(text1)
         option1.removeEventListener('click', clickOpt1)
         option2.removeEventListener('click', clickOpt2)
         option3.removeEventListener('click', clickOpt3)
         option4.removeEventListener('click', clickOpt4)
-        const button = document.createElement('button')
-        button.innerHTML = "Reset"
-        grabScore.append(button)
-        button.addEventListener('click', function () {
-            button.remove()
+        const text2 = document.createElement('span')
+        text2.innerHTML = "Click here to Replay"
+        lostMessage.append(text2)
+        
+        text2.addEventListener('click', function () {
+            this.style.cursor = 'pointer'
+            text1.remove()
+            text2.remove()
             console.log('')
-            text.innerText = `Current level: 1 Highest Level achieved: ${highestLevel}`
-            grabScore.append(text)
+            levelMessage.innerText = `Current level: 1 Highest Level achieved: ${highestLevel}`
+            grabScore.append(levelMessage)
             array = ""
             answer = ""
             randomNum = Math.floor(Math.random()*4)+1
@@ -121,8 +126,8 @@ function checkGame () {
         if (i>highestLevel) {
             highestLevel++
         }
-        text.innerText = `Current level: ${i+1}     Highest level achieved: ${highestLevel}`
-        grabScore.append(text)
+        levelMessage.innerText = `Current level: ${i+1}     Highest level achieved: ${highestLevel}`
+        grabScore.append(levelMessage)
         answer = ""
         randomNum = Math.floor(Math.random()*4)+1
         array+=randomNum
