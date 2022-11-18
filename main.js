@@ -1,12 +1,13 @@
 let array = ""
 let answer = ""
+let highestLevel = 0
 var timeOut
 const text = document.createElement('p')
 let setConditionForEventListener = false
 const option = document.querySelectorAll('.option')
-const grabBody = document.querySelector('body')
-text.innerHTML = "You are in round 1"
-grabBody.append(text)
+const grabScore = document.querySelector('#score')
+text.innerText = "Current level: 1 Highest Level achieved:"
+grabScore.append(text)
 let winCondition = true;
 let randomNum = Math.floor(Math.random()*4)+1
 let turn = 1
@@ -14,6 +15,7 @@ array+= randomNum
 console.log(`Whole correct number in turn ${turn} is: ${array}`)
 setTimeout(runColorForOptions, 1000)
 console.log("Player's chocie: ")
+
 
 const option1 = document.querySelector('#option1')
 option1.style.cursor = 'pointer'
@@ -86,27 +88,50 @@ function clickOpt4() {
 }
 //4:45PM: Need to execute immediately when player the first and second wrong answer
 function checkGame () {
-        if (answer!== array ) {
-            // console.log("You lost the game!")
-            // console.log(`Your current answer is: ${answer}`)
-            text.innerText = "You have lost the game"
-            grabBody.append(text)
-            option1.removeEventListener('click', clickOpt1)
-            option2.removeEventListener('click', clickOpt2)
-            option3.removeEventListener('click', clickOpt3)
-            option4.removeEventListener('click', clickOpt4)
-        } else {
-            text.innerText = `You are in round ${i+1}`
-            grabBody.append(text)
+    if (answer!== array ) {
+        console.log("You lost the game!")
+        console.log(`Your current answer is: ${answer}`)
+        text.innerText = `You have lost the game!`
+        grabScore.append(text)
+        option1.removeEventListener('click', clickOpt1)
+        option2.removeEventListener('click', clickOpt2)
+        option3.removeEventListener('click', clickOpt3)
+        option4.removeEventListener('click', clickOpt4)
+        const button = document.createElement('button')
+        button.innerHTML = "Reset"
+        grabScore.append(button)
+        button.addEventListener('click', function () {
+            button.remove()
+            console.log('')
+            text.innerText = `Current level: 1 Highest Level achieved: ${highestLevel}`
+            grabScore.append(text)
+            array = ""
             answer = ""
             randomNum = Math.floor(Math.random()*4)+1
             array+=randomNum
-            //Write code to each options get colored
-            console.log(`Whole correct number in turn ${turn+1} is: ${array}`)
+            console.log(`Whole correct number in turn ${turn} is: ${array}`)
             setTimeout(runColorForOptions, 1000)
-            console.log(`Playerchoice turn ${turn+1}: `)
-            turn ++
-            timeOut = setTimeout(checkGame, 100000000)
+            console.log("Player's chocie: ")
+            option1.addEventListener('click', clickOpt1)
+            option2.addEventListener('click', clickOpt2)
+            option3.addEventListener('click', clickOpt3)
+            option4.addEventListener('click', clickOpt4)
+        })
+    } else {
+        if (i>highestLevel) {
+            highestLevel++
+        }
+        text.innerText = `Current level: ${i+1}     Highest level achieved: ${highestLevel}`
+        grabScore.append(text)
+        answer = ""
+        randomNum = Math.floor(Math.random()*4)+1
+        array+=randomNum
+        //Write code to each options get colored
+        console.log(`Whole correct number in turn ${turn+1} is: ${array}`)
+        setTimeout(runColorForOptions, 1000)
+        console.log(`Playerchoice turn ${turn+1}: `)
+        turn ++
+        timeOut = setTimeout(checkGame, 100000000)
         }
     } 
 function changeColorWhenClickingOpt1 () {
