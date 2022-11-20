@@ -1,0 +1,68 @@
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color:bisque;
+}
+
+.option {
+    background-color: aquamarine;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 30px;
+    text-align:left;
+    margin: 30px auto;
+}
+.container {
+    height: 570px;
+    width: 150px;
+    background-color: black;
+    border-radius: 40px;
+    margin: 30px 0;
+    padding:20px;
+}
+body {
+    background-color:grey;
+}
+#option1 {
+    background-color: rgba(172, 255, 47, 0.594);
+    /* background-color: rgb(151, 255, 47); */
+}
+#option2 {
+    background-color: rgba(245, 14, 14, 0.682);
+}
+#option3 {
+    background-color: rgba(255, 255, 0, 0.652);
+}
+#option4 {
+    background-color: rgba(0, 255, 255, 0.704);
+}
+#score {
+    background-color: whitesmoke;
+}
+
+#lost-message {
+    box-sizing:border-box;
+    left: 39%;
+    width: 34%;
+    border-radius: 8px;
+    background-color: azure;
+    font-size: 40px;
+    font-weight: 700;
+    color: pink;
+    position: absolute;
+    text-align: center;
+    border: 2px;
+}
+
+#score {
+    box-sizing:border-box;
+    width: 35%;
+    border-radius: 8px;
+    background-color: azure;
+    font-size: 30px;
+    font-weight: 700;
+    color: pink;
+    text-align: center;
+    border: 2px;
+}
