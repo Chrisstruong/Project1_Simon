@@ -7,5 +7,6 @@ My Simon's link: https://chrisstruong.github.io/Project1_Simon/
 ![alt text](https://raw.githubusercontent.com/Chrisstruong/Project1_Simon/main/Screen%20Shot%202022-11-20%20at%206.21.25%20PM.png)
 
 MY STRETCH GOAL:
-    1) Add mode level (easy, medium, hard).
-    2) Add sounds when color blinking.
+
+1) Add mode level (easy, medium, hard).
+2) Add sounds when color blinking.
