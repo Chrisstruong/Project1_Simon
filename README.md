@@ -6,7 +6,7 @@ I am so happy to show my accomplishment at General Assembly (GA) in the first th
 
 The page displays a design of the game.
 
-![alt text] (https://imgur.com/KE5El4g)
+![alt text](https://imgur.com/KE5El4g)
 
 
 
