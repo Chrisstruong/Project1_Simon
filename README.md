@@ -1,5 +1,5 @@
 # General Assembly Project1: SIMON (traffic light version):
-### I am so happy to show my accomplishment at General Assembly (GA) in the first three weeks: Simon game. I got inspired the idea of design from traffic light in GA pre-work. I will be honored if you can take time to try out: https://chrisstruong.github.io/Project1_Simon/
+##### I am so happy to show my accomplishment at General Assembly (GA) in the first three weeks: Simon game. I got inspired the idea of design from traffic light in GA pre-work. I will be honored if you can take time to try out: https://chrisstruong.github.io/Project1_Simon/
 
 ## PARAPHRASING
 Simon is game that you have to click colors in order so as to win. There are four colors in my game. Every single round, simon will repeat the order and create one random color added to the order. The game is over when you click a wrong color in order. 
@@ -35,7 +35,7 @@ So as to play the game, click to https://chrisstruong.github.io/Project1_Simon/.
 
 ## STRETCH GOALS
 Here are some addtional details I keep in mind in the future:
-- Add mode level (easy, medium, hard).
+- Add mode levels (easy, medium, hard).
 - Add sounds when color blinking.
 
 
