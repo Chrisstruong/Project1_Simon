@@ -213,7 +213,7 @@ function delayForLoop (i){//This function is the most interesting
                 option4.style.backgroundColor = 'rgba(0, 255, 255, 0.704)'            
             },1000)
         }
-    }, 2000*i)
+    }, 2000*i)//print each color after 2s
     
 }
 function runColorForOptions () {//function to delay the for loop
